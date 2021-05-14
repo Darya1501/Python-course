@@ -1,0 +1,1 @@
+Крупные приложения написанные на Python: Sims, Civilization, Blender, GIMP; с помощью Python обрабатываются данные сайтов Google, YouTube, Facebook, Instagram
