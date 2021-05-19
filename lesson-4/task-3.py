@@ -1,4 +1,4 @@
-num = int(input('Введите трехзначное число: '))
+num = int(input('Р’РІРµРґРёС‚Рµ С‚СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ: '))
 
 first_digit = num // 100
 second_digit = (num % 100) // 10
@@ -7,5 +7,5 @@ thrid_digit = num % 10
 num_1 = first_digit + second_digit + thrid_digit
 num_2 = first_digit * second_digit * thrid_digit
 print(first_digit, second_digit, thrid_digit)
-print('Сумма цифр числа', num, 'равна', num_1)
-print('Произведение цифр числа', num, 'равно', num_2)
+print('РЎСѓРјРјР° С†РёС„СЂ С‡РёСЃР»Р°', num, 'СЂР°РІРЅР°', num_1)
+print('РџСЂРѕРёР·РІРµРґРµРЅРёРµ С†РёС„СЂ С‡РёСЃР»Р°', num, 'СЂР°РІРЅРѕ', num_2)

@@ -1,7 +1,7 @@
-count = int(input('Введите количество секунд: '))
+count = int(input('Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРєСѓРЅРґ: '))
 
 seconds = count % 60
 minutes = (count // 60) % 60
 hours = count // 3600
 
-print(count, 'секунд - это', hours, 'часа', minutes, 'минут', seconds, 'секунд')
+print(count, 'СЃРµРєСѓРЅРґ - СЌС‚Рѕ', hours, 'С‡Р°СЃ', minutes, 'РјРёРЅСѓС‚', seconds, 'СЃРµРєСѓРЅРґ')

@@ -1,6 +1,6 @@
 from math import *
 
-num = int(input('Введите целое четырехзначное число: '))
+num = int(input('Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ: '))
 first_digit = num // 1000
 second_digit = (num % 1000) // 100
 thrid_digit = (num % 100) // 10
