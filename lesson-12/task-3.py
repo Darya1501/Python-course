@@ -1,13 +1,16 @@
-# Стоимость доставки
+# Количество дней в месяце
 
-def cost_of_delivery(count):
-    cost = 100
-    while count > 1:
-        cost += 50
-        count -= 1
+def count_of_days(month):
+    count = 0
     
-    return cost
-    
-count_of_goods = int(input())
+    if month == 2:
+        count = 28
+    elif month < 8:
+        count = 30 + month % 2
+    else:
+        count = 31 - month % 2
 
-print(cost_of_delivery(count_of_goods))
+    return count
+  
+month = int(input())
+print(count_of_days(month))

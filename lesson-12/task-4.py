@@ -1,12 +1,7 @@
 # Стоимость доставки
 
 def cost_of_delivery(count):
-    cost = 100
-    while count > 1:
-        cost += 50
-        count -= 1
-    
-    return cost
+    return 100 + (count - 1) * 50
     
 count_of_goods = int(input())
 
