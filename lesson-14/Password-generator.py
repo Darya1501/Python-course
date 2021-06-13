@@ -2,7 +2,7 @@ import random
 
 def ask_question(question, sets):
     global enabled_chars
-    print('Если в пароле нужны', question, 'Введите Да: ')
+    print('Если в пароле нужны', question, 'введите Да: ')
     answer = input().lower()
     if answer.strip() == 'да':
         enabled_chars += sets
