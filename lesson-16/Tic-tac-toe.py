@@ -42,25 +42,56 @@ def end_game(field):
             
     return True
 
-field = create_field()
+def input_of_coordinates(string):
+    while True:
+        print('Введите номер', string, end='')
+        num = input()
+        if num.isdigit() and 1 <= int(num) <= 3:
+            num = int(num)
+            return num
+        else:
+            print('Неверный ввод')
+            continue
 
-
-current_symbol = 'X'
-
-while not end_game(field):
+def play():
+    field = create_field()
+    current_symbol = 'X'
+    while not end_game(field):
+        print_field(field)
+        
+        while True:
+            print('Ход игрока', current_symbol)
+            row = input_of_coordinates('строки: ')
+            column = input_of_coordinates('столбца: ')
+            if field[row - 1][column - 1] == '*':
+                field[row - 1][column - 1] = current_symbol
+                break
+            else:
+                print('Данная клетка поля занята, выберите другую!')
+                continue
+        
+        if current_symbol == 'X':
+            current_symbol = 'O'
+        else:
+            current_symbol = 'X'  
+            
     print_field(field)
-    print('Введите номер строки и номер столбца')
-    row = int(input())
-    column = int(input())
-    field[row - 1][column - 1] = current_symbol
-    
     if current_symbol == 'X':
-        current_symbol = 'O'
+        print('Ура! Победил О')
     else:
-        current_symbol = 'X'
+        print('Ура! Победил Х')
+        
 
-print_field(field)
-if current_symbol == 'X':
-    print('Ура! Победил О')
-else:
-    print('Ура! Победил Х')
+play()
+
+while True:
+    play_again = input('Хотите сыграть ещё раз? ').lower()
+    if play_again == 'да':
+        play()
+        continue
+    elif play_again == 'нет':
+        print('До новых встреч!')
+        break
+    else:
+        print('Не понял вас, игра преращена')
+        break
