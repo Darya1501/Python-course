@@ -327,7 +327,6 @@ def delete_student():
         num = int(num)
         
         for student in students:
-            print(student.number, num)
             if student.number == num:
                 studentsStorage.remove(students.index(student))
                 flag = True
