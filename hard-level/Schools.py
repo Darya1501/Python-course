@@ -314,19 +314,20 @@ def add_new_student():
     
 
 def delete_student():
-    print(f'{"Номер ученика":15} {"Имя ученика":30} {"Возраст":10} {"Класс":5}')
+    print(f'{"Номер ученика":15} {"Школа":7} {"Имя ученика":30} {"Возраст":10} {"Класс":5}')
     students = studentsStorage.get_all()
     for student in students:
-        print(f'{str(student.number):15} {student.fio:30} {str(student.age):10} {str(student.class_num):5}')
+        print(f'{str(student.number):15} {str(student.school):7} {student.fio:30} {str(student.age):10} {str(student.class_num):5}')
     
     while True:
         flag = False
         num = input('Введите номер ученика, которого вы хотите удалить: ')
-        while not num.isdigit() or int(num) < 0 or int(num) > len(students):
+        while not num.isdigit() or int(num) < 0:
             num = input('Некорректный ввод, повторите: ')
         num = int(num)
         
         for student in students:
+            print(student.number, num)
             if student.number == num:
                 studentsStorage.remove(students.index(student))
                 flag = True
